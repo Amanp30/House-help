@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="/js/faq.js" defer></script>
+
+    <title>househelp malpura</title>
+  </head>
+  <body>
+    <div class="heroSection">
+      <a href="/" class="logoLink">
+        <img src="househelp.svg" alt="househelp logo" class="logo"
+      /></a>
+      <h2>How can we help you with in 📍 Malpura</h2>
+
+      <div class="servicesList"><%- include('components/lists', list); %></div>
+    </div>
+    <div class="faqs">
+      <h2>Faq</h2>
+      <%- include('components/faq-map', faqs); %>
+    </div>
+  </body>
+</html>

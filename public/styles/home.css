@@ -1,0 +1,115 @@
+:root {
+  --bg-color: #fafafa;
+  --service-bg-color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: rgb(15, 15, 15);
+}
+
+.heroSection {
+  text-align: center;
+}
+
+.logoLink .logo {
+  margin-top: 2em;
+}
+
+.servicesList {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.3em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.service {
+  background-color: var(--service-bg-color);
+  border-radius: 1em;
+  border: 2px solid #06e6b223;
+}
+
+.service:hover {
+  border: 2px solid #06e6b0;
+  color: #06e6b0;
+  transition: all 0.2s ease-in-out;
+}
+
+.servicesList .service a {
+  color: rgb(46, 46, 46);
+
+  text-decoration: none;
+}
+
+.servicesList .service a img {
+  width: 100%;
+  min-height: 160px;
+  max-width: 100%;
+  max-height: 160px;
+  border-radius: 1em;
+}
+
+.servicesList .service a h3 {
+  font-size: 1em;
+  max-width: 80%;
+  margin: auto;
+  display: block;
+  min-height: 2em;
+}
+
+/* .servicesList .service: a h3:hover {
+  color: #06e6b0;
+} */
+
+@media (max-width: 646px) {
+  .servicesList {
+    width: 90% !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .faqs {
+    width: 90%;
+  }
+
+  .heroSection h2 {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+/* faqs */
+
+.faqs {
+  max-width: 650px;
+  margin: auto;
+  text-align: left;
+  margin-top: 2.6em;
+}
+
+.faqs h2 {
+  text-decoration: underline;
+}
+
+.faqs p {
+  line-height: 1.6;
+}
+
+.faqs [data-faq="true"] {
+  margin-bottom: 1.2em;
+}
+
+.faq-section {
+  display: grid;
+  grid-template-columns: auto 1.5em;
+  align-items: center;
+  cursor: pointer;
+}
+.faq-section img {
+  width: 1.5em;
+}

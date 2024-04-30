@@ -1,0 +1,83 @@
+:root {
+  --bg-color: #fafafa;
+  --service-bg-color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: rgb(5, 5, 5);
+}
+
+.logoLink {
+  margin-top: 2em;
+  display: block;
+  text-align: center;
+}
+
+.centerit {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+form {
+  width: 400px;
+  margin: auto;
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+
+  box-shadow: 0px 4px 9px 3px rgb(199 198 198 / 45%);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  row-gap: 0.4em;
+}
+
+.form-field label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 1em;
+  border: 1px solid black;
+  font-size: 1em;
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-size: 1.4em;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1em;
+  background-color: #06e6b0;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  border-radius: 0.5em;
+  border: none;
+  font-weight: bolder;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 646px) {
+  .centerit {
+    max-width: 90% !important; /* Set the maximum width to 646px for mobile devices */
+  }
+
+  form {
+    max-width: fit-content;
+    padding: 1.5em;
+    margin-bottom: 4em;
+  }
+}

@@ -1,0 +1,11 @@
+<% faqs.forEach(faq => { %>
+
+<div data-faq="true">
+  <div class="faq-section">
+    <h3><%= faq.title %></h3>
+    <img src="arrow.svg" alt="" srcset="" />
+  </div>
+  <p><%= faq.description %></p>
+</div>
+
+<% }); %>

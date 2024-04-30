@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/styles/slugpages.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/js/form.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <title>Best <%= data.title %> in malpura - househelp</title>
+  </head>
+  <body>
+    <a href="/" class="logoLink">
+      <img src="househelp.svg" alt="househelp logo" class="logo" />
+    </a>
+
+    <div class="centerit">
+      <h1>Best <%= data.title %> in Malpura</h1>
+      <p>
+        We can help you with best <%= data.title %> in malpura. Who can resolve
+        problem you have.
+      </p>
+      <p>You only need to fill up this form our team will call you soon.</p>
+
+      <form onsubmit="submitForm(event, '<%= data.title %>')">
+        <div class="form-field">
+          <label for="name"> Name</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="form-field">
+          <label for="mobileno"> Mobile Number</label>
+          <input
+            type="text"
+            pattern="[0-9]{10}"
+            title="Please enter a 10-digit phone number"
+            name="mobileno"
+            required
+          />
+        </div>
+        <div class="form-field">
+          <label for="address"> Address</label>
+          <textarea
+            required
+            name="address"
+            placeholder="eg. plot no. 42,  shiv colony, dudu road"
+          ></textarea>
+        </div>
+        <div class="form-field">
+          <label for="problem"> Problem</label>
+          <textarea name="problem" placeholder=""></textarea>
+          <p>You can elaborate problem you are facing here.</p>
+        </div>
+        <button type="submit">Get callback</button>
+      </form>
+    </div>
+  </body>
+</html>

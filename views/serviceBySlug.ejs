@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="/styles/slugpages.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="/js/form.js" defer></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Best <%= data.title %> in malpura - househelp</title>
   </head>
+
   <body>
     <a href="/" class="logoLink">
       <img src="househelp.svg" alt="househelp logo" class="logo" />
@@ -20,7 +21,7 @@
       </p>
       <p>You only need to fill up this form our team will call you soon.</p>
 
-      <form onsubmit="submitForm(event, '<%= data.title %>')">
+      <form id="queryForm">
         <div class="form-field">
           <label for="name"> Name</label>
           <input type="text" name="name" required />
@@ -51,5 +52,15 @@
         <button type="submit">Get callback</button>
       </form>
     </div>
+
+    <script nonce="<%= nonce %>">
+      document
+        .getElementById("queryForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const dataTitle = "<%= data.title %>";
+          submitForm(event, dataTitle);
+        });
+    </script>
   </body>
 </html>
